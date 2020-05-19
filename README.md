@@ -1,0 +1,2 @@
+# Mardi-Gras-on-Mars
+This is a game that I programmed in python at a summer camp two years ago, it is self explanatory as Humanity suddenly moves to Mars and choose to bring Mardi-Gras to Mars. I know the quality is crap and all, but it is my first game, so please do not roast me. You can edit it if you want to make improvements, but please give me credit, it is free to download, since it has a very loose licence, as long as you don't plagiarize on this project (credits go to David Bowie for this track in the game) 
