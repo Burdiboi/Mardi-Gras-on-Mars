@@ -1,6 +1,8 @@
 import pygame,os,sys,random,math,time
 from pygame.locals import *
+from pygame.version import PygameVersion
 pygame.init()
+print(PygameVersion)
 
 #some rgb colors
 background = pygame.Color(85,50,253)
@@ -15,7 +17,7 @@ score=0
 run=False
 angle =160
 
-display = pygame.display.set_mode((1280,720))   #display size
+display = pygame.display.set_mode((1920,1080))   #display size
 pygame.display.set_caption("Mardi Gras On Mars")        #This simply writes the name of the game on the window's page
 fps = pygame.time.Clock()                     #this is for frame per second
 
@@ -183,7 +185,7 @@ def DrawBoard(canvas):
         GameObject.Update(angle)     #update angle of the jewellery
         if Check_Jewellery(jewellery,crowds):
             score += 10                #every successfull caught increses score by 10
-    if score >= 200:          #game will over if you score 200
+    if score >= 420:          #game will over if you score 420
         run = False
         GameOver()
     myfont2 = pygame.font.SysFont("comicsansms", 20)
@@ -241,7 +243,7 @@ CrowdImg.append(pygame.image.load(os.path.join('images','crowd9.png')))
 
 # Type Audio Integration Block. Sound section, load Sounds and set their volume
 
-pygame.mixer.music.load(os.path.join('sounds','spaceoddity.mp3'))   #background music
+pygame.mixer.music.load(os.path.join('sounds','LifeOnMars(2021 remaster).mp3'))   #background music
 throw = pygame.mixer.Sound(os.path.join('sounds','throw.wav'))  #it works while a jewellery is thrown
 throw.set_volume(0.4)
 celebrate = pygame.mixer.Sound(os.path.join('sounds','celebration.wav'))   #celebration sound
@@ -350,6 +352,22 @@ def NewGame():
 
 
 
+#clicking the keyboard command "Esc" pausing the game until you press "Esc" again, which would continue the game
+
+
+
+
+
+
+
+
+
+#this adds a stopwatch, which counts up when playing the game until it is paused, it continues. It captures the time once you have reached the limit of the amounts 
+def time():
+    global time
+    font = pygame.font.SysFont("comicsansms",20)
+    text = font.render("time",True,green)
+    
 
 
 
